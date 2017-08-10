@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+    <div class="container">
+    <div class="row">
+        <div id="form-note">
+            <form action="/new" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="title" placeholder="title">
+                    <textarea class="form-control" rows="4"  name="text" placeholder="text"></textarea>
+                    <button class="btn btn-default btn-lg btn-block">ADD NOTE!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div  class="container grid" >
+            <% notes.forEach(function(note){ %>   
+                <div class="grid-item  " name="note">
+                    <h3><%= note.title %></h3>
+                    <p><%= note.text %></p>
+                     <form action="/<%= note._id %>?_method=DELETE" method="POST">
+                        <button class="btn  btn-default btn-xs pull-right">Delete</button>
+                    </form>
+                     <form action="/<%= note._id %>/edit" method="GET">
+                        <button class="btn  btn-default btn-xs pull-right">Edit</button>
+                    </form>
+                </div>
+            <% }); %>       
+    </div>
+
+<!--=========== Initialize masonry with Vanilla JavaScript =============-->
+           <script type="text/javascript">
+               var elem = document.querySelector('.grid');
+               var msnry = new Masonry( elem, {
+                  // options
+                  itemSelector: '.grid-item',
+                });
+                // element argument can be a selector string
+                //   for an individual element
+                var msnry = new Masonry( '.grid', {
+                });
+           </script>
+ <!--===================================================================-->   
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<% include partials/footer %>

@@ -1,0 +1,37 @@
+body{
+	background-color: #E8E8E8;
+}
+
+div {
+    display: block;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Sanchez', serif;
+}
+
+h3,p{
+ 	margin: 5px;
+}
+.container{
+	max-width: 1040px;
+	padding: 5px 20px;
+}
+
+.grid-item { 
+	width: 240px;
+	min-height: 40px;
+	background-color: orange;
+	margin: 5px ;
+}
+
+#form-note{
+	max-width: 400px;
+	margin: 15px auto;
+}
+
+textarea{
+	max-width: 400px;
+}
+
