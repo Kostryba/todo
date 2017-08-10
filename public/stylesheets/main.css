@@ -24,6 +24,7 @@ h3,p{
 	min-height: 40px;
 	background-color: orange;
 	margin: 5px ;
+	border-radius: 5px;
 }
 
 #form-note{
@@ -35,3 +36,10 @@ textarea{
 	max-width: 400px;
 }
 
+#edit-button{
+border-radius: 5px 0px 0px 5px;
+}
+
+#delete-button{
+border-radius: 0px 5px 5px 0px;
+}

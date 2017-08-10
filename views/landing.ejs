@@ -18,10 +18,10 @@
                     <h3><%= note.title %></h3>
                     <p><%= note.text %></p>
                      <form action="/<%= note._id %>?_method=DELETE" method="POST">
-                        <button class="btn  btn-default btn-xs pull-right">Delete</button>
+                        <button id="delete-button" class="btn  btn-default btn-xs pull-right">Delete</button>
                     </form>
                      <form action="/<%= note._id %>/edit" method="GET">
-                        <button class="btn  btn-default btn-xs pull-right">Edit</button>
+                        <button id="edit-button" class="btn  btn-default btn-xs pull-right">Edit</button>
                     </form>
                 </div>
             <% }); %>       
